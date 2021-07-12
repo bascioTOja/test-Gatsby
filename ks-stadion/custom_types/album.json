@@ -1,0 +1,80 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "Wprowadź przyjazną przeglądarce nazwę",
+        "placeholder" : "spotkanie-na-wyjezdzie"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Tytuł albumu"
+      }
+    },
+    "picture" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "height" : null
+        },
+        "thumbnails" : [ ],
+        "label" : "Zdjęcie nagłówkowe"
+      }
+    },
+    "thumb" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Miniaturka albumu"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : { },
+        "choices" : {
+          "photos" : {
+            "type" : "Slice",
+            "fieldset" : "Zdjęcia",
+            "description" : "Dodaj zdjęcia na stronę",
+            "icon" : "add_a_photo",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : {
+              "photo" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Zdjęcie"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "SEO" : {
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Opis"
+      }
+    },
+    "keywords" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Słowa klucz",
+        "placeholder" : "Piłka nożna, sport"
+      }
+    }
+  }
+}

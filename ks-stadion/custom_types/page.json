@@ -1,0 +1,216 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "Unikalne ID",
+        "placeholder" : "Wprowadź unikalne ID, aby ułatwić przeglądarkom wyszukiwanie tej strony"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Tytuł strony",
+        "labels" : [ "text-left", "text-center", "text-right" ],
+        "placeholder" : "Tytuł strony"
+      }
+    },
+    "baner" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "height" : null
+        },
+        "thumbnails" : [ {
+          "name" : "thumb",
+          "width" : 960,
+          "height" : null
+        } ],
+        "label" : "Zdjęcie nagłówkowe"
+      }
+    },
+    "caption" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Pierwszy akapit"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "content" : [ ],
+          "localization" : [ ],
+          "grid_content" : [ ],
+          "emote_separator" : [ ],
+          "photos" : [ ],
+          "album" : [ ]
+        },
+        "choices" : {
+          "content" : {
+            "type" : "Slice",
+            "fieldset" : "Treść",
+            "description" : "Dodaj swoją treść",
+            "icon" : "textsms",
+            "display" : "list",
+            "non-repeat" : {
+              "separator_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1",
+                  "label" : "Treść separatora",
+                  "placeholder" : "Historia naszej strony"
+                }
+              },
+              "show_separator" : {
+                "type" : "Boolean",
+                "config" : {
+                  "placeholder_false" : "nie",
+                  "placeholder_true" : "tak",
+                  "default_value" : false,
+                  "label" : "Pokaż separator"
+                }
+              },
+              "content" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "label" : "Treść",
+                  "labels" : [ "text-left", "text-center", "text-right", "image-left", "image-center", "image-right" ],
+                  "placeholder" : "Wprowadź zawartość swojego artykułu"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "localization" : {
+            "type" : "Slice",
+            "fieldset" : "Lokalizacja",
+            "description" : "Osadź swoją lokalizację",
+            "icon" : "add_location",
+            "display" : "list",
+            "non-repeat" : {
+              "localization" : {
+                "type" : "GeoPoint",
+                "config" : {
+                  "label" : "Lokalizacja"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "grid_content" : {
+            "type" : "Slice",
+            "fieldset" : "Podziel stronę na pół",
+            "description" : "Podziel stronę na pół i wstaw w nią treść",
+            "icon" : "star_half",
+            "display" : "grid",
+            "non-repeat" : { },
+            "repeat" : {
+              "left_column" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "labels" : [ "text-left", "text-center", "text-right", "image-left", "image-center", "image-right" ],
+                  "label" : "Lewa kolumna",
+                  "placeholder" : "Treść lewej kolumny"
+                }
+              },
+              "right_column" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "labels" : [ "text-left", "text-center", "text-right", "image-left", "image-center", "image-right" ],
+                  "label" : "Prawa kolumna",
+                  "placeholder" : "Treść prawej kolumny"
+                }
+              }
+            }
+          },
+          "emote_separator" : {
+            "type" : "Slice",
+            "fieldset" : "Separator z emotką",
+            "description" : "Stwórz separator, a przed nim dodaj emotkę",
+            "icon" : "stop",
+            "display" : "list",
+            "non-repeat" : {
+              "separator_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1",
+                  "label" : "Treść separatora",
+                  "placeholder" : "Piękne czasy"
+                }
+              },
+              "emote_name" : {
+                "type" : "Select",
+                "config" : {
+                  "options" : [ "users", "books" ],
+                  "default_value" : "users",
+                  "label" : "Nazwa emotki"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "photos" : {
+            "type" : "Slice",
+            "fieldset" : "Zdjęcia",
+            "description" : "Dodaj zdjęcia na stronę",
+            "icon" : "add_a_photo",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : {
+              "photo" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Zdjęcie"
+                }
+              }
+            }
+          },
+          "album" : {
+            "type" : "Slice",
+            "fieldset" : "Album",
+            "description" : "Osadź album na stronie",
+            "icon" : "photo_album",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : {
+              "album_link" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "album" ],
+                  "label" : "Link do albumu"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "SEO" : {
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Opis"
+      }
+    },
+    "keywords" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "label" : "Słowa klucz",
+        "placeholder" : "piłka nożna, sporty walki"
+      }
+    }
+  }
+}

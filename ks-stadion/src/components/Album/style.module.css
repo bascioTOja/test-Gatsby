@@ -1,0 +1,16 @@
+.container {
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  min-height: 50vh;
+}
+
+.share {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem;
+  margin-top: 5rem;
+}
+
+.share button {
+  margin-right: 0.5rem;
+}

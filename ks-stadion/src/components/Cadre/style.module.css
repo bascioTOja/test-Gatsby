@@ -1,0 +1,92 @@
+.wrapper {
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.member__card {
+  display: flex;
+  align-items: center;
+  min-height: 20rem;
+  margin: 2rem 0;
+}
+
+.card__avatar {
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 2rem;
+  overflow: hidden;
+  height: 14rem;
+  box-shadow: 0 0 0.3rem black;
+}
+
+.avatar__img {
+  height: 14rem;
+  width: 14rem;
+}
+
+.avatar__img > img {
+  border-radius: 100%;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.card__content {
+  font-size: clamp(1.2rem, 5vw, 1.6rem);
+  box-sizing: border-box;
+  height: 100%;
+  width: calc(100% - 16rem);
+  padding: 2rem 0;
+}
+
+.card__header {
+  min-height: 4rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.card__header > h3 {
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  color: #31404b;
+  text-transform: uppercase;
+}
+
+.card__main {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__main > div {
+  margin-bottom: 1.5rem;
+}
+
+.nationality__img {
+  display: block;
+  margin: 0 auto;
+}
+
+.member__phone {
+  display: block;
+  text-align: center;
+}
+
+.surname {
+  color: #1da4cc;
+}
+
+@media (max-width: 600px) {
+  .card__header > h3 {
+    text-align: center;
+  }
+
+  .card__content {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .member__card {
+    flex-direction: column;
+  }
+}

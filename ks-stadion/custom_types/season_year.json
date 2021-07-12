@@ -1,0 +1,11 @@
+{
+    "Main" : {
+      "season_name" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "paragraph",
+          "label" : "Nazwa sezonu"
+        }
+      }
+    }
+  }

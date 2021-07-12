@@ -1,0 +1,66 @@
+{
+  "Slider" : {
+    "slider" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "slide" : [ ],
+          "document_link" : [ ]
+        },
+        "choices" : {
+          "slide" : {
+            "type" : "Slice",
+            "fieldset" : "Slide",
+            "description" : "Zwykły slajd",
+            "icon" : "slideshow",
+            "display" : "list",
+            "non-repeat" : {
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1",
+                  "label" : "Tytuł slajdu"
+                }
+              },
+              "caption" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Podpis (Max 200 znaków)"
+                }
+              },
+              "photo" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Zdjęcie slajdu"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "document_link" : {
+            "type" : "Slice",
+            "fieldset" : "Osadź dokument",
+            "description" : "Osdaź dokument",
+            "icon" : "accessibility",
+            "display" : "list",
+            "non-repeat" : {
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "article", "page" ],
+                  "label" : "Dokument"
+                }
+              }
+            },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  }
+}

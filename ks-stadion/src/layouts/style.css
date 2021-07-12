@@ -1,0 +1,197 @@
+:root {
+  --dark-color: #343a40;
+  --main-color: #00a652;
+  --navbar-height: 8rem;
+  --navbar-mobile-height: 6.4rem;
+  --common-baner-height: 40.4rem;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-y: scroll !important;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0 !important;
+  background-color: #edeff4;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-style: normal;
+  color: #222;
+}
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+p {
+  word-wrap: break-word;
+  line-height: 150%;
+}
+
+.tl-edges {
+  overflow-x: hidden;
+  overflow: visible;
+}
+
+.tl-wrapper {
+  min-height: 100vh;
+}
+
+button:focus {
+  outline: none;
+}
+
+.preview__mode {
+  min-height: 4rem;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100000000000;
+}
+
+.preview__mode > span {
+  display: block;
+}
+
+.slick-dots li button:before {
+  font-size: 2rem !important;
+  color: #fff !important;
+}
+
+.slick-slide,
+.slick-slide * {
+  outline: none !important;
+}
+
+.slick-slide > div {
+  position: relative;
+}
+
+.slick-list {
+  height: 100% !important;
+}
+
+.fc-toolbar-title::first-letter {
+  text-transform: uppercase;
+}
+
+.page__wrapper {
+  overflow: visible;
+  padding-top: 6.4rem;
+  margin-bottom: 8rem;
+}
+
+.MuiTypography-body1 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 2rem !important;
+}
+
+.MuiTooltip-tooltip,
+.MuiTypography-h6,
+.MuiMenuItem-root,
+.MuiInputBase-root {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 1.6rem !important;
+}
+
+.MuiTypography-h6 {
+  font-size: 2.5rem !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 5.49rem;
+}
+
+h2 {
+  font-size: 4.39rem;
+}
+
+h3 {
+  font-size: 3.52rem;
+}
+
+h4 {
+  font-size: 2.81rem;
+}
+
+h5 {
+  font-size: 2.25rem;
+}
+
+/****************************************/
+/************Prismic Lables**************/
+/****************************************/
+
+.image-center > img,
+.image-right > img,
+.image-left > img {
+  display: block;
+}
+
+.image-center > img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-left > img {
+  margin-right: auto;
+}
+
+.image-right > img {
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.circle__progress {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .page__wrapper {
+    padding-top: 8rem;
+  }
+}

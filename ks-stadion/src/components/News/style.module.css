@@ -1,0 +1,152 @@
+.news__container {
+  min-height: calc(100vh - var(--common-baner-height) - var(--navbar-height));
+}
+
+.news__grid {
+  padding-top: 3rem;
+  height: 100%;
+  position: relative;
+}
+
+.post__loading {
+  margin-top: 0.8rem;
+  margin-left: 0.8rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30rem;
+  top: 0;
+  z-index: 100;
+}
+
+.articles__grid {
+  position: relative;
+  min-height: 106rem;
+}
+
+.filter__grid {
+  padding-top: 3rem !important;
+  margin-top: 0.8rem !important;
+  margin-bottom: 0.8rem !important;
+  border: 0.1rem solid rgba(204, 204, 204, 0.602);
+  /* border-right: 0.1rem solid #ccc; */
+  background-color: #fff;
+  border-radius: 0.4rem 0 0 0.4rem;
+  /* box-shadow: -0.2rem -0.2rem 0.2rem rgba(0, 0, 0, 0.02), -0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.02); */
+}
+
+.filter + .filter {
+  border-top: 0.1rem solid #ccc;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+.react__select {
+  font-size: 1.4rem;
+  outline: none;
+}
+
+.filter__name {
+  display: block;
+  padding: 0 0.8rem;
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.articles.loading {
+  opacity: 0;
+}
+
+.articles {
+  opacity: 1;
+  transition: 500ms;
+  overflow: hidden;
+}
+
+.article {
+  border-radius: 0 !important;
+  box-sizing: border-box;
+  min-height: 30rem !important;
+  background-color: #fff;
+}
+
+.article + div {
+  margin-top: 1rem;
+}
+
+.grid__item {
+  min-height: 30rem !important;
+  overflow: hidden;
+}
+
+.article__image {
+  min-width: 100%;
+  height: 100% !important;
+}
+
+.article__content {
+  padding: 3rem;
+}
+
+.article__date {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #9a9da2;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.article__title {
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+}
+
+.article__text {
+  margin-top: 1.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+.articles__pagination {
+  margin-top: 6rem;
+}
+
+.articles__pagination > ul > li:first-child {
+  margin-left: auto;
+}
+
+.articles__pagination > ul > li:last-child {
+  margin-right: auto;
+}
+
+.articles__pagination > ul > li > button {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 960px) {
+  .grid__item {
+    min-height: 20rem !important;
+  }
+
+  .article__grid {
+    flex-direction: column-reverse;
+  }
+
+  .article__image {
+    height: 20rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .article__content {
+    padding: 1rem;
+  }
+
+  .article__text {
+    text-align: justify;
+  }
+
+  .grid__item {
+    min-height: 15rem !important;
+  }
+}

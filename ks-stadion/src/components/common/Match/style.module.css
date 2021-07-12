@@ -1,0 +1,30 @@
+.match__date,
+.match__type {
+  text-transform: uppercase !important;
+  font-weight: 600;
+}
+
+.match__club {
+  padding: 1.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.match__vs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.club__name {
+  margin-top: 0.5rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

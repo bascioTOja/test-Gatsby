@@ -1,0 +1,228 @@
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.paper {
+  --dark-color: #343a40;
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
+}
+
+.not__planed {
+  display: inline-block;
+  padding: 4rem 2rem;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+.header {
+  background-color: var(--dark-color) !important;
+  padding: 1rem;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.match__date,
+.match__type {
+  text-transform: uppercase !important;
+  font-weight: 600;
+}
+
+.match__club {
+  margin: 1.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.match__vs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more {
+  display: block;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--dark-color);
+  color: #fff;
+  transition: 0.5s;
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
+}
+
+.custom__button,
+.social__wrapper {
+  font-weight: 800;
+  min-height: 8.4rem;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #e4e7ed;
+  box-sizing: border-box;
+  position: relative;
+  transition: 250ms;
+}
+
+.social__youtube {
+  background-color: rgba(255, 0, 0, 1);
+}
+
+.social__twitter {
+  background-color: rgb(29, 161, 242);
+}
+
+.social__facebook {
+  background-color: #4d6baa;
+}
+
+.social__protrainup {
+  background-color: #36cdfe;
+  background-image: linear-gradient(-19deg, #36cdfe 0%, #8e00b2b9 80%);
+}
+
+.social__instagram {
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.custom__button__image__wrapper {
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.custom__button__anchor,
+.social__anchor {
+  padding: 2rem 6rem 1.8rem 8.6rem;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.img__wrapper,
+.custom__button_prefix__img,
+.svg__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6.8rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg__transparent {
+  background-color: transparent;
+}
+
+.social__img,
+.social__svg {
+  height: 2rem;
+  fill: #fff;
+}
+
+.button__content,
+.social__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button__h5,
+.caption {
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1.4em;
+}
+
+.caption1 {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+}
+
+.caption2 {
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+}
+
+.custom__button__anchor:hover .plus__icon,
+.social__anchor:hover .plus__icon {
+  transform: rotateZ(90deg);
+}
+
+.plus__icon {
+  position: absolute;
+  height: 100%;
+  width: clamp(1rem, 6vw, 2.6rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: clamp(0.1rem, 4vw, 2.3rem);
+  top: 0;
+  transition: 250ms;
+}
+
+.plus__icon > svg {
+  fill: #fff;
+  height: 2.6rem;
+  width: 100%;
+}
+
+.highlight {
+  position: relative;
+}
+
+.highlight__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 6rem !important;
+  height: 6rem !important;
+  transform: translate(30%, 0);
+  filter: drop-shadow(0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.3));
+}
+
+.highlight__thumb {
+  width: 100% !important;
+  max-height: 100%;
+}
+
+.highlight__thumb__wrapper {
+  height: 20rem;
+  width: 100%;
+}
+
+.highlight__content > p {
+  margin: 0;
+  padding: 2rem 4rem;
+  font-size: 1.6rem;
+}
+
+.partner {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.partner__img {
+  height: auto !important;
+}
+
+.partner__img img {
+  width: 20rem !important;
+  height: auto !important;
+}
+
+.partner__img img:first-child {
+  position: relative !important;
+}

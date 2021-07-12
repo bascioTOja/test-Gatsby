@@ -1,0 +1,26 @@
+.tabs__wrapper {
+  margin-top: -4rem;
+  top: calc(100vh - 7.2rem);
+  position: sticky;
+  background-color: #fff;
+  z-index: 10000;
+  box-shadow: 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.02);
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 1px rgba(204, 204, 204, 0.246);
+}
+
+.tab {
+  font-size: 1.4rem;
+}
+
+.tab svg {
+  font-size: 3rem;
+}
+
+.container {
+  padding-bottom: 11.9rem;
+}

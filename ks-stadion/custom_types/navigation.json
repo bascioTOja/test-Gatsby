@@ -1,0 +1,18 @@
+{
+    "Navigation": {
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "name",
+          "placeholder": "Drużyny"
+        }
+      },
+      "link": {
+        "type": "Text",
+        "config": {
+          "label": "Link",
+          "placeholder": "#"
+        }
+      }
+    }
+  }

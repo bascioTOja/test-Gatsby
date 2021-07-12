@@ -1,0 +1,12 @@
+{
+    "private": true,
+    "workspaces": [
+        "ks-stadion",
+        "gatsby-source-protrainup"
+    ],
+    "scripts": {
+        "build": "yarn workspace ks-stadion build",
+        "clean": "yarn workspace ks-stadion clean",
+        "dev": "yarn workspace ks-stadion develop"
+    }
+}

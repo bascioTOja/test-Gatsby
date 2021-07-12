@@ -1,0 +1,28 @@
+.table__header {
+  font-size: clamp(1.4rem, 3vw, 2rem) !important;
+  word-wrap: break-word;
+  font-weight: 600 !important;
+}
+
+.table__body {
+  font-size: clamp(1.2rem, 3vw, 1.6rem) !important;
+}
+
+.player__data__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.table__avatar {
+  display: inline-block;
+  padding-right:.3rem;
+  border-radius: 50%;
+  width: 40px !important;
+  height: 40px !important;
+  overflow: hidden;
+}
+
+.table__body > span {
+  display: block;
+}

@@ -1,0 +1,49 @@
+.wrapper {
+  height: var(--common-baner-height);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.background {
+  height: var(--common-baner-height);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.background::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.15);
+}
+
+.background > div {
+  height: var(--common-baner-height);
+}
+
+.text {
+  height: var(--common-baner-height);
+  color: #fff;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.text > h1 {
+  text-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.8);
+  font-size: clamp(2rem, 10vw, 6rem);
+  font-weight: 400 !important;
+  text-align: center;
+  font-family: inherit;
+  font-style: normal;
+}

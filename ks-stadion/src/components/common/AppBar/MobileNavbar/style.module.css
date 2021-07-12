@@ -1,0 +1,35 @@
+.navbar {
+  height: var(--navbar-mobile-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__icon {
+  font-size: 4rem !important;
+  filter: drop-shadow(0.1rem 0 0.15rem rgba(0, 0, 0, 0.2));
+}
+
+.navbar__item {
+  padding: 0.8rem 0;
+  justify-content: center !important;
+}
+
+.item__text {
+  text-align: center;
+  padding-right: 2rem;
+}
+
+.item__text > span {
+  font-size: 1.8rem;
+}
+
+.item__nested > span {
+  font-size: 1.4rem !important;
+}
+
+@media (min-width: 961px) {
+  .navbar {
+    display: none;
+  }
+}

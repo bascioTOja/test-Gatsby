@@ -1,0 +1,131 @@
+.wrapper {
+  --common-baner-height: max(60vh, 40rem);
+
+  height: var(--common-baner-height);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.slider,
+.background {
+  height: var(--common-baner-height);
+  width: 100%;
+  position: relative;
+}
+
+.background {
+  z-index: -1;
+}
+
+.background::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--common-baner-height);
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 50;
+}
+
+.text__wrapper {
+  position: absolute;
+  top: 0;
+  left: 2.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  height: var(--common-baner-height);
+  width: 95%;
+  --shadow: 0 0 0.3rem rgba(0, 0, 0, 1);
+}
+
+.text__content {
+  position: relative;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 28px rgba(255, 255, 255, 0.44);
+  border-radius: 0.4rem;
+  max-height: 40rem;
+  width: clamp(20rem, 60vw, 40rem);
+  padding: 2rem;
+  bottom: 0;
+  color: #fff;
+}
+
+.text__title {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: bolder;
+  padding-bottom: 1.5rem;
+  color: #fff;
+  text-shadow: var(--shadow);
+}
+
+.text__caption {
+  display: inline-block;
+  font-weight: 300;
+  padding: 1rem;
+  font-size: clamp(1.2rem, 3vw, 1.6rem) !important;
+  text-shadow: var(--shadow);
+  overflow: hidden;
+  max-height: 18rem;
+}
+
+.arrow {
+  position: absolute;
+  height: var(--common-baner-height);
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.arrow svg {
+  font-size: 6.4rem;
+}
+
+.right__arrow {
+  right: 0;
+  left: auto;
+}
+
+@media (min-width: 600px) {
+  .text__wrapper {
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  .text__content {
+    position: absolute;
+    bottom: 4rem;
+  }
+  .text__content {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 960px) {
+  .text__wrapper {
+    transform: translateX(6%);
+  }
+
+  .arrow {
+    display: flex;
+  }
+}
+
+@media (min-width: 1440px) {
+  .text__wrapper {
+    width: 1280px;
+    transform: translateX(calc((100vw - 1280px) / 2));
+  }
+}

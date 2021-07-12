@@ -1,0 +1,20 @@
+.page {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.paper {
+  padding: 3rem 3rem;
+  font-size: 1.6rem;
+}
+
+.share {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem;
+}
+
+.share button {
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,147 @@
+.card__header {
+  padding: 4rem 2rem;
+}
+
+.card__header > img {
+  height: 8rem;
+}
+
+.header__title {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+.header__title > h4 {
+  margin: 0;
+  color: #31404b;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 5vw, 2.8rem);
+}
+
+.team__header {
+  border-bottom: 0.1rem solid #e4e7ed;
+  border-top: 0.1rem solid #e4e7ed;
+  padding: 2rem 0;
+  background: #f5f7f9;
+  text-align: center;
+}
+
+.team__header > h5 {
+  font-size: 2rem;
+}
+
+.league__button__wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 2rem;
+  height: calc(100% - 1rem);
+}
+
+.league__button {
+  padding-left: 4rem !important;
+  padding-right: 4rem !important;
+  font-size: 1.4rem !important;
+}
+
+.info {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  padding: 4rem 0;
+}
+
+.info__item {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.info__item > h5 {
+  padding-bottom: 1rem;
+}
+
+.info__item > span {
+  color: #9a9da2;
+}
+
+.last__match {
+  padding: 3rem 2rem;
+}
+
+.profile__date {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #31404b;
+}
+
+.score > h3 {
+  font-size: 4.4rem;
+}
+
+.score > span {
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+
+.club {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.club > div:first-child {
+  margin-bottom: 2rem;
+}
+
+.club__name {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.footer {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.footer > a {
+  display: block;
+  width: 48%;
+  margin: 0 1%;
+}
+
+.footer__button {
+  border-radius: 0 !important;
+  width: 100%;
+  font-size: clamp(1.2rem, 2vw, 1.5rem) !important;
+}
+
+@media (max-width: 960px) {
+  .score {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer > a {
+    width: 98%;
+    margin-bottom: 1rem;
+  }
+}

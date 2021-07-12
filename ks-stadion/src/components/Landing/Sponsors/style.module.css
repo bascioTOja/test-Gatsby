@@ -1,0 +1,41 @@
+.sponsors__wrapper {
+  margin-top: 1rem;
+}
+
+.sponsors {
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.sponsors__slider {
+  padding: 2rem 0;
+  height: 100%;
+}
+
+.sponsors__slider > div > div {
+  display: flex !important;
+  align-items: center;
+}
+
+.sponsor__link {
+  display: flex;
+  justify-content: center;
+}
+
+.sponsor__link:focus {
+  outline: none;
+}
+
+.sponsor__img {
+  height: auto !important;
+}
+
+.sponsor__img img {
+  width: 7rem !important;
+  height: auto !important;
+}
+
+.sponsor__img img:first-child {
+  position: relative !important;
+}

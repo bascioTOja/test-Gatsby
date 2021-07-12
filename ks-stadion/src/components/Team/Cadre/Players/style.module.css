@@ -1,0 +1,129 @@
+.wrapper {
+  background-color: #fff;
+  margin-top: 4rem;
+  box-shadow: 0.3rem 0.3rem 0.9rem rgba(0, 0, 0, 0.2);
+}
+
+.players {
+  padding: 4rem 2rem;
+}
+
+.team__header {
+  border-bottom: 0.1rem solid #e4e7ed;
+  border-top: 0.1rem solid #e4e7ed;
+  padding: 2rem 0;
+  background: #f5f7f9;
+  text-align: center;
+}
+
+.team__header > h5 {
+  font-size: 2rem;
+}
+
+.team__header > h5::first-letter {
+  text-transform: uppercase;
+}
+
+.player__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+  text-align: left;
+  padding: 0 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  height: 5.5rem;
+}
+
+.player__name {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
+}
+
+.fa__shirt {
+  height: 100%;
+  color: #fff;
+  filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.8));
+}
+
+.player__number {
+  position: absolute;
+  font-weight: 700;
+  font-size: 1.6rem;
+  right: 3.45rem;
+  width: 2.5rem;
+  top: 2rem;
+  text-align: center;
+}
+
+.player__details {
+  position: relative;
+}
+
+.image__wrapper {
+  margin-top: 1.5rem;
+  width: 100%;
+  overflow: hidden;
+  height: 18rem;
+}
+
+.avatar {
+  border-radius: 100%;
+  margin: 0 auto;
+}
+
+.player__badge {
+  margin-top: 2rem;
+}
+
+.player__stats {
+  display: flex;
+  flex-direction: column;
+  height: 26.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+}
+
+.stats__row {
+  width: 100%;
+  height: calc(100% / 5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.stats__row:last-child {
+  border-bottom: none;
+}
+
+.stats__cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 1.1rem 2rem;
+  width: 65%;
+}
+
+.stats__cell:last-child {
+  width: 35%;
+}
+
+.red__cards,
+.yellow__cards {
+  padding: 0.3rem;
+  margin: 0 0.5rem;
+  font-weight: 700;
+}
+
+.red__cards {
+  background-color: red;
+  color: #fff;
+}
+
+.yellow__cards {
+  background-color: yellow;
+  color: #000;
+}

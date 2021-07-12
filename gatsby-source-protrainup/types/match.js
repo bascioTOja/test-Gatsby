@@ -1,0 +1,47 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatTypes = exports.MatchTypeNames = exports.MatchEventTypes = void 0;
+exports.MatchEventTypes = [
+    "defense",
+    "red_card",
+    "score",
+    "substitution",
+    "technical_foul",
+    "throw",
+    "yellow_card",
+];
+exports.MatchTypeNames = ["cup", "friendly", "league", "other"];
+exports.StatTypes = [
+    "active_game",
+    "first_squad",
+    "ball_losses",
+    "assists",
+    "minutes",
+    "corners",
+    "field_possession_attack",
+    "defenses",
+    "field_possession_center",
+    "field_possession_defense",
+    "formation",
+    "fouls",
+    "free_kicks",
+    "minute_penalties",
+    "inaccurate_passes",
+    "offsides",
+    "outs",
+    "passes",
+    "possession",
+    "penalties",
+    "red_cards",
+    "scores",
+    "shoots",
+    "shoots_ongoal",
+    "successful_pressings",
+    "substitutions",
+    "tagging",
+    "tackles",
+    "technical_fouls",
+    "throws",
+    "unsuccessful_pressings",
+    "yellow_cards",
+];

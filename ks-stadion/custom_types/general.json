@@ -1,0 +1,431 @@
+{
+  "General" : {
+    "logo" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : null,
+          "height" : null
+        },
+        "thumbnails" : [ ],
+        "label" : "Logo Twojego klubu"
+      }
+    },
+    "default_crest" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : null,
+          "height" : null
+        },
+        "thumbnails" : [ ],
+        "label" : "Podstawowy herb drużyny, wyświetla się jeżeli drużyna nie posiada żadnego przypisanego herbu."
+      }
+    },
+    "google_map_api_key" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Google map API key",
+        "placeholder" : "Klucz do googla, aby mapa prawidłowa działało"
+      }
+    },
+    "main_color" : {
+      "type" : "Color",
+      "config" : {
+        "label" : "Główny kolor"
+      }
+    },
+    "secondary_color" : {
+      "type" : "Color",
+      "config" : {
+        "label" : "Drugorzędny kolor"
+      }
+    }
+  },
+  "ProtrainUp" : {
+    "active_season" : {
+      "type" : "Link",
+      "config" : {
+        "select" : "document",
+        "customtypes" : [ "season_year" ],
+        "label" : "Aktywny sezon",
+        "placeholder" : "Wybierz aktualny sezon"
+      }
+    },
+    "menu_show_teams" : {
+      "type" : "Boolean",
+      "config" : {
+        "placeholder_false" : "nie",
+        "placeholder_true" : "tak",
+        "default_value" : true,
+        "label" : "Pokaż drużyny w menu"
+      }
+    },
+    "year_as_label" : {
+      "type" : "Boolean",
+      "config" : {
+        "placeholder_false" : "nie",
+        "placeholder_true" : "tak",
+        "default_value" : true,
+        "label" : "Rok jako etykieta"
+      }
+    },
+    "menu_teams_position" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Pozycja drużyn w menu",
+        "placeholder" : "np. 2"
+      }
+    },
+    "flip_card" : {
+      "type" : "Boolean",
+      "config" : {
+        "placeholder_false" : "nie",
+        "placeholder_true" : "tak",
+        "default_value" : true,
+        "label" : "Obracaj karty zawodników"
+      }
+    }
+  },
+  "SEO" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Tytuł strony internetowej",
+        "placeholder" : "K.S Stadion"
+      }
+    },
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "label" : "Opis",
+        "placeholder" : "Opis Twojej strony internetowej"
+      }
+    },
+    "keywords" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "keyword" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Słowo klucz"
+            }
+          }
+        },
+        "label" : "Słowa kluczowe"
+      }
+    }
+  },
+  "Nawigacja" : {
+    "navigation" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "navigation" : [ ]
+        },
+        "choices" : {
+          "navigation" : {
+            "type" : "Slice",
+            "fieldset" : "Nawigacja",
+            "description" : "Dodaj nawigację",
+            "icon" : "navigation",
+            "display" : "list",
+            "non-repeat" : {
+              "link_name" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1",
+                  "label" : "Nazwa odnośnika"
+                }
+              },
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "link",
+                  "customtypes" : [ "page", "article" ],
+                  "allowTargetBlank" : true
+                }
+              }
+            },
+            "repeat" : {
+              "link_name" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1",
+                  "label" : "Nazwa odnośnika"
+                }
+              },
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "allowTargetBlank" : true,
+                  "label" : "link",
+                  "customtypes" : [ "page", "article" ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Widgety" : {
+    "widgets" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "next_match" : [ ],
+          "previous_match" : [ ],
+          "facebook" : [ ],
+          "instagram" : [ ],
+          "twitter" : [ ],
+          "youtube" : [ ],
+          "custom_button" : [ ],
+          "highlight" : [ ],
+          "partner" : [ ],
+          "protrainup" : [ ]
+        },
+        "choices" : {
+          "next_match" : {
+            "type" : "Slice",
+            "fieldset" : "Następny mecz",
+            "icon" : "skip_next",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : { }
+          },
+          "previous_match" : {
+            "type" : "Slice",
+            "fieldset" : "Poprzedni mecz",
+            "icon" : "skip_previous",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : { }
+          },
+          "facebook" : {
+            "type" : "Slice",
+            "fieldset" : "Facebook",
+            "description" : "Dodaj odnośnik do facebooka",
+            "icon" : "share",
+            "display" : "list",
+            "non-repeat" : {
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Adres do facebooka",
+                  "select" : "web",
+                  "allowTargetBlank" : true
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "instagram" : {
+            "type" : "Slice",
+            "fieldset" : "Instagram",
+            "description" : "Dodaj odnośnik do instagrama",
+            "icon" : "share",
+            "display" : "list",
+            "non-repeat" : {
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Adres do instagrama",
+                  "select" : "web",
+                  "allowTargetBlank" : true
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "twitter" : {
+            "type" : "Slice",
+            "fieldset" : "Twitter",
+            "description" : "Dodaj odnośnik do twittera",
+            "icon" : "share",
+            "display" : "list",
+            "non-repeat" : {
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Adres do twittera",
+                  "select" : "web",
+                  "allowTargetBlank" : true
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "youtube" : {
+            "type" : "Slice",
+            "fieldset" : "Youtube",
+            "description" : "Dodaj odnośnik do youtube",
+            "icon" : "share",
+            "display" : "list",
+            "non-repeat" : {
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Adres do youtube",
+                  "select" : "web",
+                  "allowTargetBlank" : true
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "custom_button" : {
+            "type" : "Slice",
+            "fieldset" : "Przycisk",
+            "description" : "Zaprojektuj własny odnośnik",
+            "icon" : "brush",
+            "display" : "list",
+            "non-repeat" : {
+              "caption" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1",
+                  "label" : "Treść odnośnika",
+                  "placeholder" : "ProtrainUp"
+                }
+              },
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Odnośnik",
+                  "select" : "web",
+                  "allowTargetBlank" : true
+                }
+              },
+              "color" : {
+                "type" : "Color",
+                "config" : {
+                  "label" : "Kolor przycisku"
+                }
+              },
+              "photo" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 20,
+                    "height" : 20
+                  },
+                  "thumbnails" : [ ],
+                  "label" : "Obrazek na przycisku"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "highlight" : {
+            "type" : "Slice",
+            "fieldset" : "Wyróżnij",
+            "description" : "Wyróżnij stronę lub artykuł",
+            "icon" : "stars",
+            "display" : "list",
+            "non-repeat" : {
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "article", "page" ],
+                  "label" : "Link"
+                }
+              },
+              "encourage_text" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "Zachęcający tekst",
+                  "placeholder" : "Zapraszam wszystkich zainteresowanych do zapoznania się z artykułem"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "partner" : {
+            "type" : "Slice",
+            "fieldset" : "Partner",
+            "description" : "Dodaj głównego partnera",
+            "icon" : "business_center",
+            "display" : "list",
+            "non-repeat" : {
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Odnośnik do strony partnera",
+                  "select" : "web",
+                  "allowTargetBlank" : true
+                }
+              },
+              "photo" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 200
+                  },
+                  "thumbnails" : [ ],
+                  "label" : "Logo partnera"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "protrainup" : {
+            "type" : "Slice",
+            "fieldset" : "Protrainup",
+            "description" : "Dodaj odnośnik do logowania protrainup",
+            "icon" : "book",
+            "display" : "list",
+            "non-repeat" : {
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "link",
+                  "select" : "web",
+                  "placeholder" : "Adres do logowania",
+                  "allowTargetBlank" : true
+                }
+              }
+            },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  },
+  "Sponsorzy" : {
+    "sponsors" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "photo" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : {
+                "width" : 70,
+                "height" : null
+              },
+              "thumbnails" : [ ],
+              "label" : "Logo sponsora"
+            }
+          },
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "label" : "Odnośnik do sponsora",
+              "select" : "web"
+            }
+          }
+        },
+        "label" : "Sponsorzy"
+      }
+    }
+  }
+}

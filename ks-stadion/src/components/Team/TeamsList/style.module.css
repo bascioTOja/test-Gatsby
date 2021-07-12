@@ -1,0 +1,81 @@
+.container {
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.teams__list {
+  background-color: #fff;
+  display: flex;
+  flex-grow: 1;
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
+  /* Fix grid container padding */
+  padding: 1.2rem;
+  padding-top: 1rem;
+}
+
+.team__card {
+  border: 0.1rem solid #e4e7ed;
+  height: 100%;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  position: relative;
+  background-color: rgb(250, 250, 250);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+  margin-bottom: 4.2rem;
+}
+
+.extended__informations {
+  box-sizing: border-box;
+  padding: 2rem;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  top: 0;
+  left: 0;
+}
+
+.card__color {
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 100%;
+}
+
+.crest {
+  margin-top: 1.5rem;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.content {
+  margin-bottom: 2.2rem;
+  padding-bottom: 4rem;
+}
+
+.more {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #31404b;
+  color: #fff;
+  margin-top: 2rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: clamp(1.4rem, 5vw, 1.8rem);
+  transition: 0.5s;
+}

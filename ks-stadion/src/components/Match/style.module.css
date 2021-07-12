@@ -1,0 +1,18 @@
+.team__name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.team__selector {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem;
+}
+
+@media (max-width: 960px) {
+  .team__name > img {
+    display: none;
+  }
+}

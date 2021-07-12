@@ -1,0 +1,23 @@
+.progress {
+  width: 100%;
+  height: calc(100% - 0.5rem);
+  background-color: #86898c;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+.progress__bar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #28a745;
+  transition: width 0.6s ease;
+}
+
+.progress__value {
+  padding: 0.25rem;
+}

@@ -1,0 +1,129 @@
+.header {
+  height: 4.2rem;
+  text-align: center;
+  color: #31404b;
+  font-weight: 600;
+  display: flex;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.125);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.125);
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f7f9;
+  font-size: 1.6rem;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.events {
+  padding: 1rem 0;
+  position: relative;
+  font-size: 1.4rem;
+}
+
+.events::after {
+  top: 0;
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 0.2rem;
+  background-color: #31404b;
+  left: calc(50% - 0.1rem);
+  z-index: 1;
+}
+
+.time {
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+  margin: 1.5rem auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 3.4rem;
+  height: 3.4rem;
+  font-size: 1.4rem;
+  text-align: center;
+  border: 0.2rem solid rgba(0, 0, 0, 0.125);
+}
+
+.time__symbol {
+  top: 0.5rem;
+  right: 0.15rem;
+  position: absolute;
+}
+
+.event__grid__item {
+  display: flex;
+  justify-content: center;
+}
+
+.event__data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event__host {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.event__guest {
+  flex-direction: row;
+}
+
+.event__player__name {
+  padding: 0 1rem;
+  flex-grow: 1;
+}
+
+.event__card {
+  display: block;
+  height: 3.4rem;
+  width: 2.4285rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.substitution {
+  position: relative;
+  display: flex;
+}
+
+.substitution__names > span {
+  display: block;
+  text-align: center;
+}
+
+.substitution__names > span:nth-child(2) {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.383);
+  text-shadow: 0 0 0.1rem rgba(0, 0, 0, 0, 0.225);
+  font-weight: bold;
+}
+
+.substitution__arrows {
+  width: 4.5rem;
+  height: 100%;
+}
+
+.substitution__arrows > svg {
+  right: 0;
+  position: absolute;
+  top: 0.5rem;
+  filter: drop-shadow(0.1rem 0.1rem 0.06rem rgba(0, 0, 0, 0.22));
+}
+
+.substitution__arrows > svg:nth-child(2) {
+  right: 0.6rem;
+  top: 1.5rem;
+}

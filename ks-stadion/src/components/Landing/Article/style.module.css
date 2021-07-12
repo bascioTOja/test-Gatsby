@@ -1,0 +1,38 @@
+.wrapper {
+  overflow: hidden;
+  margin-top: 6rem;
+}
+
+.article {
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.thumb {
+  width: 100% !important;
+  height: 25rem !important;
+}
+
+.section {
+  padding: 0 2.4rem;
+}
+
+.title {
+  margin-top: 1rem;
+}
+
+.title > h2 {
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  margin-bottom: 0.2rem;
+}
+
+.content {
+  padding: 0.8rem 0 0.8rem 0;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+@media (min-width: 960px) {
+  .thumb {
+    height: 56rem !important;
+  }
+}

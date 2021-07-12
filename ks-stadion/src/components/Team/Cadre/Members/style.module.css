@@ -1,0 +1,52 @@
+.wrapper {
+  background-color: #fff;
+  margin-top: 4rem;
+  box-shadow: 0.3rem 0.3rem 0.9rem rgba(0, 0, 0, 0.2);
+}
+
+.members {
+  padding: 8rem 2rem;
+}
+
+.image__wrapper {
+  margin-top: 3rem;
+  width: 100%;
+  overflow: hidden;
+  height: 18rem;
+}
+
+.avatar {
+  border-radius: 100%;
+  margin: 0 auto;
+}
+
+.card__main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.member__name {
+  display: block;
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1.28rem;
+}
+
+.phone,
+.email {
+  padding: 0.5rem 0;
+  font-weight: 700;
+}
+
+.phone {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.email {
+  font-size: 1.3rem;
+}
