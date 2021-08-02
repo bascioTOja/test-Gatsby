@@ -86,17 +86,6 @@ export const query = graphql`
         country
         age_group
 
-        annual_seasons {
-          season {
-            name
-            team_image {
-              childImageSharp {
-                gatsbyImageData(layout: FIXED, width: 600, placeholder: BLURRED)
-              }
-            }
-          }
-        }
-
         main_coach {
           user {
             full_name

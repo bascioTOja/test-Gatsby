@@ -100,11 +100,6 @@ export const query = graphql`
         team_name
         age_group
 
-        annual_seasons {
-          season {
-            name
-          }
-        }
       }
     }
 
@@ -112,9 +107,7 @@ export const query = graphql`
       ...ProtrainupMatchEventConnectionFragment
     }
 
-    matchPlayers: allProtrainupPlayerMatch(filter: { match_id: { eq: $matchId }, player_id: { ne: null } }) {
-      ...ProtrainupPlayerMatchConnectionFragment
-    }
+
 
     match: protrainupMatch(match_id: { eq: $matchId }) {
       ...ProtrainupMatchFragment
