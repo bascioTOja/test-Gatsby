@@ -67,17 +67,7 @@ export const query = graphql`
       discipline
       country
       color
-
-      annual_seasons {
-        season {
-          name
-          team_image {
-            childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
-            }
-          }
-        }
-      }
+      
     }
 
     members: allProtrainupMember(filter: { team_id: { eq: $teamId } }) {
