@@ -17,9 +17,7 @@ export const LoadGeneralData = (general: PrismicGeneralProps & { teams: { nodes:
   if (!isGeneralLoaded) {
     const payload = {
       prismicGeneral: general.prismicGeneral,
-      teams: general.teams.nodes.filter((team) =>
-        team.annual_seasons.some((season) => season.season?.name === general.prismicGeneral.data.active_season.document?.data.season_name.text)
-      )
+      teams: general.teams.nodes
     }
     dispatch(setGeneralState(payload))
   }
