@@ -100,11 +100,6 @@ export const query = graphql`
         team_name
         age_group
 
-        annual_seasons {
-          season {
-            name
-          }
-        }
       }
     }
 
