@@ -46,7 +46,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-prismic',
       options: {
-        repositoryName: 'gatsby-project-test',
+        repositoryName: 'stadion',
         accessToken: process.env.PRISMIC_TOKEN,
         schemas: {
           general: require('./custom_types/general.json'),
