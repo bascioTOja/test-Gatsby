@@ -14,6 +14,41 @@ import { MainPageProps } from '../types'
 import { LoadGeneralData } from '../utils'
 import * as classes from './style.module.css'
 
+class ErrorBoundary extends React.Component {
+  constructor(props: {} | Readonly<{}>) {
+    super(props);
+    this.state = { error: null, errorInfo: null };
+  }
+
+  componentDidCatch(error: any, errorInfo: any) {
+    // Catch errors in any components below and re-render with error message
+    this.setState({
+      error: error,
+      errorInfo: errorInfo
+    })
+    // You can also log error messages to an error reporting service here
+  }
+
+  render() {
+    if (!this.state.errorInfo) {
+      return this.props.children;
+    } else {
+      // Error path
+      return (
+        <div>
+          <h2>Something went wrong.</h2>
+          <details style={{whiteSpace: 'pre-wrap'}}>
+            {this.state.error && this.state.error.toString()}
+            <br/>
+            {this.state.errorInfo.componentStack}
+          </details>
+        </div>
+      );
+    }
+    // Normally, just render children
+  }
+}
+
 const Teams = ({ data }: PageProps<MainPageProps & { page: PrismicPageProps | null }>) => {
   const baner = data.page?.data.baner.fluid
   const { t } = useTranslation()
@@ -29,20 +64,22 @@ const Teams = ({ data }: PageProps<MainPageProps & { page: PrismicPageProps | nu
 
   return (
     <LayoutTransition>
-      <Seo
-        description={data.page?.data.description?.text}
-        keywords={data.page?.data.keywords?.text}
-        imgSrc={data.page?.data.baner.fluid?.srcWebp}
-        title={`${data.page ? data.page.data.title.text : t('current-teams')} - ${pageTitle}`}
-      />
-      <Baner text={`Baner strony z drużynami w sezonie - ${activeSeason}`} alt={t('current-teams')} fluid={baner} />
-      {teamsInSeason.length > 0 ? (
-        <TeamsList teams={teamsInSeason} />
-      ) : (
-        <Container className={classes.list__empty}>
-          <h1>Brak drużyn w tym sezonie</h1>
-        </Container>
-      )}
+      <ErrorBoundary>
+        <Seo
+          description={data.page?.data.description?.text}
+          keywords={data.page?.data.keywords?.text}
+          imgSrc={data.page?.data.baner.fluid?.srcWebp}
+          title={`${data.page ? data.page.data.title.text : t('current-teams')} - ${pageTitle}`}
+        />
+        <Baner text={`Baner strony z drużynami w sezonie - ${activeSeason}`} alt={t('current-teams')} fluid={baner} />
+        {teamsInSeason.length > 0 ? (
+          <TeamsList teams={teamsInSeason} />
+        ) : (
+          <Container className={classes.list__empty}>
+            <h1>Brak drużyn w tym sezonie</h1>
+          </Container>
+        )}
+      </ErrorBoundary>
     </LayoutTransition>
   )
 }

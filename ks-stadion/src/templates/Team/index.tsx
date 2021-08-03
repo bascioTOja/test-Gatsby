@@ -10,6 +10,41 @@ import { getPageTitle } from '../../redux/selectors'
 import { MainPageProps, TeamTemplateQueryProps, TransitionStatutes } from '../../types'
 import { LoadGeneralData } from '../../utils'
 
+class ErrorBoundary extends React.Component {
+  constructor(props: {} | Readonly<{}>) {
+    super(props);
+    this.state = { error: null, errorInfo: null };
+  }
+
+  componentDidCatch(error: any, errorInfo: any) {
+    // Catch errors in any components below and re-render with error message
+    this.setState({
+      error: error,
+      errorInfo: errorInfo
+    })
+    // You can also log error messages to an error reporting service here
+  }
+
+  render() {
+    if (!this.state.errorInfo) {
+      return this.props.children;
+    } else {
+      // Error path
+      return (
+        <div>
+          <h2>Something went wrong.</h2>
+          <details style={{whiteSpace: 'pre-wrap'}}>
+            {this.state.error && this.state.error.toString()}
+            <br/>
+            {this.state.errorInfo.componentStack}
+          </details>
+        </div>
+      );
+    }
+    // Normally, just render children
+  }
+}
+
 const IndexTemplate = (
   props: { transitionStatus: typeof TransitionStatutes[number] } & PageProps<TeamTemplateQueryProps & MainPageProps>
 ) => {
@@ -23,18 +58,20 @@ const IndexTemplate = (
 
   return (
     <LayoutTransition>
-      <Seo
-        imgSrc={data.team.system_club?.crest_url}
-        title={`${data.team.team_name} - ${pageTitle}`}
-        description={`Drużyna ${data.team.team_name}`}
-      />
-      <Baner
-        banerHeight={teamBaner && teamBaner.width > teamBaner.height ? 'max(60vh, 40rem)' : undefined}
-        alt={`Zdjęcie nagłówkowe drużyny ${data.team.team_name}`}
-        gatsbyImage={teamBaner}
-        text={data.team.team_name}
-      />
-      <MainContent {...data} />
+      <ErrorBoundary>
+        <Seo
+          imgSrc={data.team.system_club?.crest_url}
+          title={`${data.team.team_name} - ${pageTitle}`}
+          description={`Drużyna ${data.team.team_name}`}
+        />
+        <Baner
+          banerHeight={teamBaner && teamBaner.width > teamBaner.height ? 'max(60vh, 40rem)' : undefined}
+          alt={`Zdjęcie nagłówkowe drużyny ${data.team.team_name}`}
+          gatsbyImage={teamBaner}
+          text={data.team.team_name}
+        />
+        <MainContent {...data} />
+      </ErrorBoundary>
     </LayoutTransition>
   )
 }

@@ -16,6 +16,41 @@ import { LoadGeneralData } from '../../utils'
 import * as classes from './style.module.css'
 import Seo from '../../components/common/Seo'
 
+class ErrorBoundary extends React.Component {
+  constructor(props: {} | Readonly<{}>) {
+    super(props);
+    this.state = { error: null, errorInfo: null };
+  }
+
+  componentDidCatch(error: any, errorInfo: any) {
+    // Catch errors in any components below and re-render with error message
+    this.setState({
+      error: error,
+      errorInfo: errorInfo
+    })
+    // You can also log error messages to an error reporting service here
+  }
+
+  render() {
+    if (!this.state.errorInfo) {
+      return this.props.children;
+    } else {
+      // Error path
+      return (
+        <div>
+          <h2>Something went wrong.</h2>
+          <details style={{whiteSpace: 'pre-wrap'}}>
+            {this.state.error && this.state.error.toString()}
+            <br/>
+            {this.state.errorInfo.componentStack}
+          </details>
+        </div>
+      );
+    }
+    // Normally, just render children
+  }
+}
+
 const Match = ({ data }: PageProps<MatchTemplateQueryProps & MainPageProps>) => {
   const mainSquadRef = useRef<HTMLDivElement>({} as HTMLDivElement)
   const benchRef = useRef<HTMLDivElement>({} as HTMLDivElement)
@@ -51,38 +86,40 @@ const Match = ({ data }: PageProps<MatchTemplateQueryProps & MainPageProps>) => 
 
   return (
     <LayoutTransition>
-      <Seo description={`Mecz dnia - ${data.match.date}, ${data.match.host_name} przeciwko ${data.match.guest_name} `} title={`${data.match.host_name} vs ${data.match.guest_name} - ${pageTitle}`}/>
-      <Helmet>
-        <title>{`${data.match.host_name} vs ${data.match.guest_name} - ${pageTitle}`}</title>
-      </Helmet>
-      <Tabs
-        mainSquadRef={firstSquadPlayers.length > 0 ? mainSquadRef : null}
-        benchRef={reservePlayers.length > 0 ? benchRef : null}
-        timelineRef={data.events.nodes.length > 0 ? timelineRef : null}
-        previewRef={previewRef}
-      />
+      <ErrorBoundary>
+        <Seo description={`Mecz dnia - ${data.match.date}, ${data.match.host_name} przeciwko ${data.match.guest_name} `} title={`${data.match.host_name} vs ${data.match.guest_name} - ${pageTitle}`}/>
+        <Helmet>
+          <title>{`${data.match.host_name} vs ${data.match.guest_name} - ${pageTitle}`}</title>
+        </Helmet>
+        <Tabs
+          mainSquadRef={firstSquadPlayers.length > 0 ? mainSquadRef : null}
+          benchRef={reservePlayers.length > 0 ? benchRef : null}
+          timelineRef={data.events.nodes.length > 0 ? timelineRef : null}
+          previewRef={previewRef}
+        />
 
-      <Container className={classes.preview__wrapper}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={widgets.length > 0 ? 8 : 12}>
-            <MatchPreview
-              mainSquadRef={mainSquadRef}
-              benchRef={benchRef}
-              timelineRef={timelineRef}
-              previewRef={previewRef}
-              mainSquad={firstSquadPlayers}
-              bench={reservePlayers}
-              events={data.events.nodes}
-              match={data.match}
-            />
-          </Grid>
-          {widgets.length > 0 && (
-            <Grid item xs={12} md={4}>
-              <Widgets widgets={widgets} />
+        <Container className={classes.preview__wrapper}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={widgets.length > 0 ? 8 : 12}>
+              <MatchPreview
+                mainSquadRef={mainSquadRef}
+                benchRef={benchRef}
+                timelineRef={timelineRef}
+                previewRef={previewRef}
+                mainSquad={firstSquadPlayers}
+                bench={reservePlayers}
+                events={data.events.nodes}
+                match={data.match}
+              />
             </Grid>
-          )}
-        </Grid>
-      </Container>
+            {widgets.length > 0 && (
+              <Grid item xs={12} md={4}>
+                <Widgets widgets={widgets} />
+              </Grid>
+            )}
+          </Grid>
+        </Container>
+      </ErrorBoundary>
     </LayoutTransition>
   )
 }
