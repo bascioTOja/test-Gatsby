@@ -15,8 +15,8 @@ const IndexTemplate = (
 ) => {
   const { data } = props
 
-  // const teamBaner = data.team.annual_seasons.find((season) => season.season?.name === data.prismicGeneral.data.active_season.document?.data.season_name.text)?.season
-  //   ?.team_image?.childImageSharp.gatsbyImageData
+  const teamBaner = data.team.annual_seasons.find((season) => season.season?.name === data.prismicGeneral.data.active_season.document?.data.season_name.text)?.season
+    ?.team_image?.childImageSharp.gatsbyImageData
 
   LoadGeneralData(data)
   const pageTitle = useSelector(getPageTitle)
@@ -29,10 +29,9 @@ const IndexTemplate = (
         description={`Drużyna ${data.team.team_name}`}
       />
       <Baner
-        // banerHeight={teamBaner && teamBaner.width > teamBaner.height ? 'max(60vh, 40rem)' : undefined}
-        banerHeight='max(60vh, 40rem)'
+        banerHeight={teamBaner && teamBaner.width > teamBaner.height ? 'max(60vh, 40rem)' : undefined}
         alt={`Zdjęcie nagłówkowe drużyny ${data.team.team_name}`}
-        // gatsbyImage={teamBaner}
+        gatsbyImage={teamBaner}
         text={data.team.team_name}
       />
       <MainContent {...data} />
@@ -68,6 +67,17 @@ export const query = graphql`
       discipline
       country
       color
+
+      annual_seasons {
+        season {
+          name
+          team_image {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH)
+            }
+          }
+        }
+      }
     }
 
     members: allProtrainupMember(filter: { team_id: { eq: $teamId } }) {
